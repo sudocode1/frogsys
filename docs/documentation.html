@@ -1,0 +1,70 @@
+<html>
+    <font face="Helvetica">
+    <body>
+        <h1>FrogSYS documentation</h1>
+        <h2>Pre-installation/Pre-use</h2>
+        <p>
+            Check that dr(number) doesn't exist. No directories should exist. <br />
+            If they do, you do not have a clean install. Delete the drives and clear CFG. <br />
+        </p> 
+
+        <br />
+
+        <h2>Creating disks</h2>
+        <p>Begin by launching diskpart
+            <pre># diskpart</pre>
+            The terminal will then ask for a disk number. Name this accordingly.
+            <pre># disk number=NUMBER</pre>
+            Give your disk a name. Example "General Files."
+            <pre># disk name=General Files</pre>
+            Mount the boot to your choice.
+            <b><p style="color:red;">IMPORTANT: Mounting boot incorrectly can cause serious errors and may need config changes. When wanting to mount boot, enter the following</p></b>
+            <pre># Mount Boot [Y/N]=Y</pre>
+            After finishing diskpart, open the directory eg. /dr1/ and run finishDiskPart.bat to create archives and packages.
+        </p>
+
+        <br />
+
+        <h2>PKG</h2>
+        <p>
+            PKG is the pre-installed (clean installation) package wrapper/manager for FrogSYS. <br />
+            Launch PKG:
+            <pre># pkg</pre>
+            <h3>Installing packages [.pkg]</h3>
+            Load the installer:
+            <pre># install</pre>
+            Pick a drive/disk to install to:
+            <pre># drive number=3</pre>
+            Choose a package from /packages/[name].pkg
+            eg hello.pkg
+            <pre># package?hello</pre>
+            The package will then install.
+
+            <h3>Archiving packages [.bat]</h3>
+            <b><p style="color:red;">PKG Archiving is buggy and shouldn't be used often; Packages like ARCHIVAL should be used for archiving.</p></b>
+            Load the archiver
+            <pre># archive</pre>
+            Pick a drive/disk to archive to
+            <pre># drive to archive to=NUMBER</pre>
+            Get the directory of the .bat
+            <pre># directory=</pre>
+            Give the package a name/new name:
+            <pre># package name?hello</pre>
+         </p>
+
+         <br />
+
+         <h2>Useful / suggested packages</h2>
+         <p>
+             <h3>Package managers</h3>
+             pacman [pacman] - Advanced package manager, similar to Arch Linux <br />
+             PKG+ [pkgplus] - Advanced (beta) version of PKG <br />
+             Archival [archival] - Archival Software (pkg archive but good)
+             <h3>General Useful Programs</h3>
+             Calculator [calc] - Calculator <br />
+             File Browser [browse] - File Browser <br />
+
+         </p>
+    </body>
+    </font>
+</html>

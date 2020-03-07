@@ -1,0 +1,7 @@
+@echo off
+
+set /p calc1=math=
+set /a RESULT=%calc1%
+echo %RESULT%
+
+pause

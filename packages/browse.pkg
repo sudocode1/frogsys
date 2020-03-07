@@ -1,0 +1,22 @@
+@echo off
+
+
+echo Welcome to File Browser for FrogSYS
+:start
+set /p command=browse/create=
+
+if %command%==browse (
+    
+    set /p dir=directory=
+    dir %dir%
+    
+)
+
+if %command%==create (
+
+    set /p toCreate=directory to create in %CD%=
+    mkdir %toCreate%
+)
+
+pause
+goto start
